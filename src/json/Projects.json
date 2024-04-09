@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1",
+        "name": "Memory Game",
+        "image": "https://i.imgur.com/uoIZGe0.png",
+        "tech": "tecnologías aplicadas",
+        "info": "información del proyecto",
+        "linkWeb": "https://memory-game-dt0l0bwm5-joanbenaiges-projects.vercel.app/",
+        "linkGithub": "https://github.com/JoanBenaiges/memory-game"
+    },
+    {
+        "id": "2",
+        "name": "Raccoons vs Dogs Game",
+        "image": "https://i.imgur.com/3xzI03Z.png",
+        "tech": "tecnologías aplicadas",
+        "info": "información del proyecto",
+        "linkWeb": "https://raccoonsvsdogs.netlify.app/",
+        "linkGithub": "https://github.com/JoanBenaiges/CromiGame"
+    },
+    {
+        "id": "3",
+        "name": "HappyCodev",
+        "image": "https://i.imgur.com/wX9VUxj.png",
+        "tech": "tecnologías aplicadas",
+        "info": "información del proyecto",
+        "linkWeb": "https://happycodev.com/",
+        "linkGithub": "https://github.com/HappyCodev/HappyCode-Landing-client"
+    },
+    {
+        "id": "4",
+        "name": "Canine Click Connect",
+        "image": "https://i.imgur.com/oMAfrZK.png",
+        "tech": "tecnologías aplicadas",
+        "info": "información del proyecto",
+        "linkWeb": "https://canine-click.netlify.app/",
+        "linkGithub": "https://github.com/JoanBenaiges/CCC-client"
+    }
+]
