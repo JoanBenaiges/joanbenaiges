@@ -15,6 +15,6 @@ I'm always open to collaborations and contributions on my projects. If you have 
 You can find me on the following platforms:
 
 - [LinkedIn](https://www.linkedin.com/in/joan-benaiges-94bb9460/)
-- [Email]: (jobeto87@gmail.com)
+- [Email](jobeto87@gmail.com)
 
 Thank you for visiting my GitHub channel! I hope you find my projects interesting and that we can collaborate in the future.
