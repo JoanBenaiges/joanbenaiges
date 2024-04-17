@@ -1,19 +1,17 @@
 import Navigation from './components/Navigation'
-import About from './components/About'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
 import Footer from './components/Footer'
-
+import AppRoutes from './routes/AppRoutes'
+import './App.css'
 
 function App() {
 
   return (
     <>
+
       <Navigation />
-      <About />
-      <Projects />
-      <Contact />
+      <AppRoutes />
       <Footer />
+
     </>
   )
 }
