@@ -12,19 +12,19 @@ function Navigation() {
     return (
         <div className='navigation'>
             <nav>
-                <div className="logo">JoanBenaiges</div>
+
+                <img src="./public/logo.png" className="logo"></img>
                 <div className="nav-container">
                     <div className="menu-icon" onClick={toggleMenu}>☰</div>
                     <ul className={`nav-links ${showMenu ? 'show' : ''}`}>
-                        <li><Link to='/'>About Me</Link></li>
+                        <li><Link to='/'>Home</Link></li>
+                        <li><Link to='/about-me'>About Me</Link></li>
                         <li><Link to='/projects'>Projects</Link></li>
                         <li><Link to='/contact-me'>Contact Me</Link></li>
                     </ul>
                 </div>
-                <button>Dark/Light</button>
 
             </nav>
-            <hr className='hr-navigation' />
         </div>
     );
 }

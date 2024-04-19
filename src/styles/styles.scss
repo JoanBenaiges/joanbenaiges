@@ -1,7 +1,11 @@
 @import './base/base';
 
-@import './components/About';
-@import './components/Contact';
 @import './components/Footer';
+@import './components/FormContact';
 @import './components/Navigation';
-@import './components/Projects';
+@import './components/ProjectsCard';
+
+@import './pages/AboutMe';
+@import './pages/ContactMe';
+@import './pages/Home';
+@import './pages/Projects';
