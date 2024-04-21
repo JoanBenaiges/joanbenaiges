@@ -44,7 +44,7 @@
                     padding: 0 15px;
 
                     a {
-                        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                        font-family: $font-family;
                         text-decoration: none;
                         color: white;
                         font-size: 17px;
@@ -55,7 +55,7 @@
                     &:hover {
 
                         a {
-                            color: #53cd98;
+                            color: $green-light;
                             transition: .5s;
                         }
                     }

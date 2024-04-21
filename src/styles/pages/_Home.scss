@@ -2,15 +2,15 @@ html,
 body {
     height: 100%;
     margin: 0;
+
 }
 
 .home-page {
+    font-family: $font-family;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; // Toma el 100% del viewport height
-    width: 100%; // Toma el 100% del viewport width
+    height: 100vh;
     background: $background-radient;
-    color: white; // Agrega un color de texto para asegurar la legibilidad
-    padding: 20px; // Añade un padding para separar el contenido del borde del contenedor
+    color: white;
 }
