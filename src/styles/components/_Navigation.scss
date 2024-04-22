@@ -12,14 +12,17 @@
         height: 50px;
         border-radius: 50%;
 
+
         &.english {
             background-image: url('https://i.imgur.com/wAv6qId.png');
             @include button-flag;
+
         }
 
         &.spanish {
             background-image: url('https://i.imgur.com/HsvhOBt.png');
             @include button-flag;
+
         }
 
     }
@@ -47,6 +50,7 @@
             align-items: center;
             justify-content: center;
             flex-grow: 1;
+            margin-right: 100px;
 
 
             .menu-icon {
@@ -58,13 +62,11 @@
 
             .nav-links {
 
-
                 &.show {
                     display: block;
                 }
 
                 li {
-
                     font-size: 1.25rem;
                     display: inline-block;
                     padding: 0 15px;
@@ -73,8 +75,7 @@
                         font-family: $font-family;
                         text-decoration: none;
                         color: white;
-                        font-size: 17px;
-                        font-weight: 500;
+                        font-size: 1.2rem;
                         transition: color 0.3s ease;
                     }
 
@@ -82,11 +83,28 @@
 
                         a {
                             color: $green-light;
-                            transition: .5s;
+                            position: relative;
+
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                bottom: -2px;
+                                left: 50%;
+                                width: 100%;
+                                height: 2px;
+                                background-color: $green-light;
+                                transform: translateX(-50%) scaleX(0);
+                                transition: transform 0.3s ease;
+                            }
+
+                            &:hover:after {
+                                transform: translateX(-50%) scaleX(1);
+                            }
                         }
                     }
                 }
             }
+
         }
     }
 

@@ -1,16 +1,86 @@
-html,
 body {
     height: 100%;
     margin: 0;
 
-}
+    .home-page {
+        height: 100%;
+        margin: 0;
+        font-family: $font-family;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: $background-radient;
+        color: white;
 
-.home-page {
-    font-family: $font-family;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: $background-radient;
-    color: white;
+        .image {
+            margin: 5% 0;
+            background-image: url("https://i.imgur.com/gu9Qe0F.jpeg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+            width: 30vw;
+            height: 30vw;
+            position: relative;
+            translate: 20%
+        }
+
+        .contentText {
+
+            position: absolute;
+            z-index: 1;
+            translate: -60%;
+
+            h1 {
+                font-size: 6rem;
+                line-height: 1;
+                margin: 0%;
+                visibility: hidden;
+
+                .break-line {
+                    display: block;
+                }
+            }
+
+            .show-title {
+                visibility: visible;
+                overflow: hidden;
+                white-space: nowrap;
+                animation: typing 1s steps(100, end);
+            }
+
+            @keyframes typing {
+                from {
+                    width: 0;
+                }
+
+                to {
+                    width: 100%;
+                }
+            }
+
+            p {
+                font-size: 2rem;
+                visibility: hidden;
+            }
+
+            .contactLogos {
+
+                display: flex;
+                justify-content: center;
+                translate: -10%;
+
+                .linkedInLogo {
+                    background-image: url("/public/linkedin.svg");
+                    @include logosStyle();
+                }
+
+                .gitHubLogo {
+                    background-image: url("/public/github.svg");
+                    @include logosStyle();
+                }
+            }
+        }
+    }
 }

@@ -5,7 +5,6 @@ function Footer() {
     return (
         <>
             <footer className="footer">
-                <hr className='hr-footer' />
                 <p>&copy; 2023 Joan Benaiges.</p>
             </footer>
         </>

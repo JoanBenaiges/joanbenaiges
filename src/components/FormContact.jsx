@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function ContactForm({ language, toggleLanguage }) {
+function ContactForm({ language }) {
     const [showForm, setShowForm] = useState(false);
     useEffect(() => {
         const timer = setTimeout(() => {
