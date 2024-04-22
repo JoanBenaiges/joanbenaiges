@@ -7,6 +7,32 @@
     z-index: 99;
     color: white;
 
+    button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+
+        &.english {
+            background-image: url('https://i.imgur.com/wAv6qId.png');
+            @include button-flag;
+        }
+
+        &.spanish {
+            background-image: url('https://i.imgur.com/HsvhOBt.png');
+            @include button-flag;
+        }
+
+    }
+
+    button:hover {
+        transition: .5s;
+        cursor: pointer;
+    }
+
+    button:active {
+        scale: 0.9;
+    }
+
     nav {
         display: flex;
         align-items: center;

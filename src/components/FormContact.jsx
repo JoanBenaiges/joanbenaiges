@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function ContactForm() {
+function ContactForm({ language, toggleLanguage }) {
     const [showForm, setShowForm] = useState(false);
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -56,23 +56,22 @@ function ContactForm() {
     };
 
     return (
-
         <div className={`form-container ${showForm ? 'animated' : ''}`}>
             <form className={`form`} onSubmit={handleSubmit} action="https://formspree.io/f/your_form_id" method="POST">
                 <div className="form-group">
-                    <label htmlFor="name">Name:</label>
+                    <label htmlFor="name">{language === 'en' ? 'Name' : 'Nombre'}:</label>
                     <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="email">Email:</label>
+                    <label htmlFor="email">{language === 'en' ? 'Email' : 'Correo electrónico'}:</label>
                     <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="message">Message:</label>
+                    <label htmlFor="message">{language === 'en' ? 'Message' : 'Mensaje'}:</label>
                     <textarea id="message" name="message" value={formData.message} onChange={handleChange} required />
                 </div>
-                <button type="submit" className='form-submit-btn'>Send</button>
-                {showMessage && <div className="message-sent">Message sent!</div>}
+                <button type="submit" className='form-submit-btn'>{language === 'en' ? 'Send' : 'Enviar'}</button>
+                {showMessage && <div className="message-sent">{language === 'en' ? 'Message sent!' : '¡Mensaje enviado!'}</div>}
             </form>
         </div>
     );

@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import FormContact from '../components/FormContact'
+import FormContact from '../components/FormContact';
 
-function ContactMe() {
-
-
+function ContactMe({ language, toggleLanguage }) {
     return (
         <div className='contactMePage'>
-            <FormContact />
+            <FormContact language={language} toggleLanguage={toggleLanguage} />
         </div>
     );
 }
-
 
 export default ContactMe;
