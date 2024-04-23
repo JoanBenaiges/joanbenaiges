@@ -1,39 +1,64 @@
-import React, { useState } from "react"
-import projectsData from "../json/Projects.json"
+import React, { useState, useEffect } from "react";
+import projectsData from "../json/Projects.json";
 
-function CardProject() {
-    const [hoveredProject, setHoveredProject] = useState(null);
+function CardProject({ language }) {
+
+    const [showProject, setShowProject] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowProject(true);
+        }, 200);
+        return () => clearTimeout(timer);
+    }, []);
 
     return (
+        <div className={`list-projects ${showProject ? 'animated-card' : ''}`}>
 
-        <div className="projects-page">
+            {projectsData.map((project, index) => (
 
-            {projectsData.map(project => (
-                <div
-                    className={`card ${hoveredProject === project.id ? 'hovered' : ''}`}
-                    key={project.id}
-                    onMouseEnter={() => setHoveredProject(project.id)}
-                    onMouseLeave={() => setHoveredProject(null)}
-                >
-                    <img src={project.image} alt={project.name} />
-                    <div className="info">
-                        <p className="name">{project.name}</p>
-                        <p className="tech">{project.tech}</p>
-                        {hoveredProject === project.id && (
-                            <div className="extra-info">
-                                <p>{project.info}</p>
+                <div class="card-project">
+                    <div class="card-wrapper">
+
+                        <div class="card-face front" style={{ backgroundImage: `url(${project.image})` }}>
+
+                            <div class="card-content">
+                                <div class="card-title">{project.name}</div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="card-face back">
+                            <div class="card-content">
+
+                                <div class="card-tech">{project.tech}</div>
+                                {language === 'en' ? (
+
+                                    <div class="card-description">{project.infoEnglish}</div>
+
+                                ) : (
+
+                                    <div class="card-description">{project.info}</div>
+
+                                )}
+
                                 <div className="links">
-                                    <a href={project.linkGithub} >
+
+                                    <a href={project.linkGithub} target="_blank">
                                         <img className="icon" src="https://svgur.com/i/14L9.svg" alt={project.name} />
                                     </a>
-                                    <a href={project.linkWeb} >
+
+                                    <a href={project.linkWeb} target="_blank">
                                         <img className="icon" src="https://i.imgur.com/ykjyx1q.png" alt={project.name} />
                                     </a>
+
                                 </div>
                             </div>
-                        )}
+                        </div>
                     </div>
                 </div>
+
             ))}
         </div>
     );

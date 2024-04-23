@@ -10,7 +10,7 @@ body {
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background: $background-radient;
+        background: $background-gradient;
         color: white;
 
         .image {
@@ -23,7 +23,13 @@ body {
             width: 30vw;
             height: 30vw;
             position: relative;
-            translate: 20%
+            translate: 20%;
+            visibility: hidden;
+
+            &.animated-image {
+                visibility: visible;
+                animation: fadeIn 1s forwards;
+            }
         }
 
         .contentText {
@@ -65,22 +71,75 @@ body {
                 visibility: hidden;
             }
 
-            .contactLogos {
-
+            .social-link {
                 display: flex;
-                justify-content: center;
-                translate: -10%;
+                height: 70px;
+                width: 270px;
+                padding-left: 3.5rem;
+                visibility: hidden;
 
-                .linkedInLogo {
-                    background-image: url("/public/linkedin.svg");
-                    @include logosStyle();
+                &.animated-image {
+                    visibility: visible;
+                    animation: fadeIn 1s forwards;
                 }
 
-                .gitHubLogo {
-                    background-image: url("/public/github.svg");
-                    @include logosStyle();
+                .svg {
+                    transition: opacity 0.25s;
+                    z-index: 2;
+                    cursor: pointer;
+                    transform: scale(1);
+                    width: 60%;
+                    height: 100%;
+                }
+
+                .social-github,
+                .social-linkedin,
+                .social-cv {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 25%;
+                    color: whitesmoke;
+                    font-size: 32px;
+                    transition: 0.25s;
+                    border-radius: 50px;
+                }
+
+                .social-github:hover {
+                    background-color: black;
+                    animation: bounce 0.4s linear;
+                }
+
+                .social-linkedin:hover {
+                    background-color: #0a66c2;
+                    animation: bounce 0.4s linear;
+                }
+
+                .social-cv:hover {
+                    background-color: #06900d;
+                    animation: bounce 0.4s linear;
+                }
+
+                @keyframes bounce {
+                    40% {
+                        transform: scale(1.3);
+                    }
+
+                    60% {
+                        transform: scale(0.7);
+                    }
+
+                    80% {
+                        transform: scale(1.1);
+                    }
+
+                    100% {
+                        transform: scale(0.9);
+                    }
                 }
             }
+
         }
     }
 }

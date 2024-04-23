@@ -4,8 +4,17 @@ function About() {
 
     return (
         <div className="aboutme-page">
-            <h1>About me page</h1>
-            <p>info hola que tal esto es el about me page....</p>
+            <label class="switch">
+                <input type="checkbox" checked="checked" ></input>
+                <div class="button">
+                    <div class="light"></div>
+                    <div class="dots"></div>
+                    <div class="characters"></div>
+                    <div class="shine"></div>
+                    <div class="shadow"></div>
+                </div>
+            </label>
+
         </div>
 
     );

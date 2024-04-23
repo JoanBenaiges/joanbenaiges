@@ -16,12 +16,14 @@
         &.english {
             background-image: url('https://i.imgur.com/wAv6qId.png');
             @include button-flag;
+            border: solid 2px $green-light;
 
         }
 
         &.spanish {
             background-image: url('https://i.imgur.com/HsvhOBt.png');
             @include button-flag;
+            border: solid 2px $green-light;
 
         }
 

@@ -1,148 +1,94 @@
-.projects-page {
+.list-projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    visibility: hidden;
 
-    .card {
-        width: calc(30% - 10px);
-        height: auto;
-        overflow: hidden;
-        position: relative;
-        border: $green-light;
-        margin: 20px;
-        transition: transform 0.3s;
-        display: inline-block;
-        vertical-align: top;
-        position: relative;
-        transition: transform 0.3s;
-
-
-        &:hover {
-            transform: scale(1.12);
-            z-index: 1;
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-            transition: transform 0.3s;
-            display: block;
-        }
-
-        .info {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            color: #fff;
-            box-sizing: border-box;
-            transition: transform 0.3s;
-            transform: translateY(100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        &:hover .info {
-            transform: translateY(0%);
-            opacity: 1;
-        }
-
-        .extra-info {
-            display: none;
-            margin-bottom: 5px;
-            padding-top: 1rem;
-
-            p {
-                font-size: 1rem;
-                text-align: justify;
-                margin-top: 0.5rem;
-                margin-left: 1rem;
-                margin-right: 1rem;
-            }
-        }
-
-        &.hovered .extra-info {
-            display: block;
-        }
-
-        .name {
-            font-size: 1.3em;
-            text-align: center;
-        }
-
-        .tech {
-            font-size: 1.2rem;
-            text-align: center;
-            margin: 1%
-        }
-
-        .links {
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-
-            .icon {
-                margin: 1rem;
-                width: 3rem;
-                height: 3rem;
-            }
-
-        }
-
+    &.animated-card {
+        visibility: visible;
+        animation: fadeIn 1s forwards;
     }
 
+    .card-project {
+        margin-bottom: 0.7rem;
+        padding: 1rem;
+        position: relative;
+        width: 450px;
+        height: 300px;
+        perspective: 1000px;
 
-}
+        .card-wrapper {
 
-@media only screen and (max-width: 768px) {
-    .projects {
-        margin-top: 4rem;
-        margin-bottom: 4rem;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 1s;
 
-        .card {
-            width: calc(100% - 10px);
-            height: 15rem;
+            .card-face {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid $green-light;
+                border-radius: 15px;
+                background-color: red;
 
-            &:hover {
-                transform: scale(1.1);
-                z-index: 1;
-            }
+                .card-content {
+                    text-align: center;
+                    color: white;
+                    width: 100%;
 
-            .extra-info {
-                display: none;
-                padding-top: 0.5rem;
+                    .card-title {
+                        margin-top: 10rem;
+                        font-size: 24px;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                        background-color: rgba(0, 0, 0, 0.8);
+                        padding: 0.8rem;
+                    }
 
-                p {
-                    font-size: 0.7rem;
-                    margin-left: 1rem;
-                    margin-right: 1rem;
+                    .card-tech {
+                        font-size: 24px;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+
+                    }
+
+                    .card-description {
+                        font-size: 16px;
+                    }
+
+                    .links {
+
+                        .icon {
+                            margin: 0.5rem;
+                            width: 2rem;
+                            height: 2rem;
+                        }
+                    }
                 }
             }
 
-            .name {
-                font-size: 1rem;
+            .card-face.front {
+                transform: rotateY(0deg);
+                background-size: cover;
+                background-position: center;
             }
 
-            .tech {
-                font-size: 0.9rem;
+            .card-face.back {
+                transform: rotateY(180deg);
+                background: linear-gradient(#1b1b1b, #141414);
             }
 
-            .links {
-                margin-top: 0rem;
-
-                .icon {
-                    margin: 0.5rem;
-                    width: 2rem;
-                    height: 2rem;
-                }
-            }
         }
+
+
     }
 
+    .card-project:hover .card-wrapper {
+        transform: rotateY(180deg);
+    }
 }
