@@ -30,6 +30,8 @@ $font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background-position: center;
     border: none;
     cursor: pointer;
+    border: solid 2px $green-light;
+
 }
 
 @mixin logosStyle {

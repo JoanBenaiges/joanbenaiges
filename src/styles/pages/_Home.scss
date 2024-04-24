@@ -15,7 +15,7 @@ body {
 
         .image {
             margin: 5% 0;
-            background-image: url("https://i.imgur.com/gu9Qe0F.jpeg");
+            background-image: url("https://i.imgur.com/NWoE8wK.png");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -40,9 +40,12 @@ body {
 
             h1 {
                 font-size: 6rem;
+                width: 30rem;
                 line-height: 1;
                 margin: 0%;
                 visibility: hidden;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+
 
                 .break-line {
                     display: block;
@@ -69,6 +72,7 @@ body {
             p {
                 font-size: 2rem;
                 visibility: hidden;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
             }
 
             .social-link {

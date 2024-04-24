@@ -23,7 +23,7 @@ function Home({ language }) {
                 <h1 className={showTitle ? "show-title" : ""}>
                     {language === 'en' ? (
                         <>
-                            Hi, <span className="break-line">I'm Joan.</span>
+                            ¡Hi! <span className="break-line">Joan here.</span>
                         </>
                     ) : (
                         <>
