@@ -1,0 +1,37 @@
+[
+    {
+        "id": "1",
+        "name": "JavaScript",
+        "logoImage": "14Le.svg"
+    },
+    {
+        "id": "2",
+        "name": "HTML5",
+        "logoImage": "14LL.svg"
+    },
+    {
+        "id": "3",
+        "name": "CSS3",
+        "logoImage": "14Kp.svg"
+    },
+    {
+        "id": "4",
+        "name": "React",
+        "logoImage": "14KY.svg"
+    },
+    {
+        "id": "5",
+        "name": "Angular",
+        "logoImage": "14KK.svg"
+    },
+    {
+        "id": "10",
+        "name": "SASS",
+        "logoImage": "14Jb.svg"
+    },
+    {
+        "id": "9",
+        "name": "Bootstrap",
+        "logoImage": "14Ja.svg"
+    }
+]

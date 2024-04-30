@@ -1,0 +1,23 @@
+.skills-list {
+
+    display: flex;
+
+    .image-and-name {
+        text-align: center;
+        transition: transform 0.3s ease;
+
+        img {
+            width: 3.125rem;
+            height: 3.125rem;
+        }
+
+        p {
+            margin-top: 5px;
+        }
+    }
+
+    .image-and-name:hover {
+        color: $green-light;
+        transform: scale(1.1);
+    }
+}

@@ -29,7 +29,7 @@ body {
 
             &.animated-image {
                 visibility: visible;
-                animation: fadeIn 1s forwards;
+                animation: fadeIn 0.5s forwards;
             }
         }
 
@@ -56,7 +56,7 @@ body {
                 visibility: visible;
                 overflow: hidden;
                 white-space: nowrap;
-                animation: typing 1s steps(100, end);
+                animation: typing 0.5s steps(100, end);
             }
 
             @keyframes typing {
@@ -85,7 +85,7 @@ body {
 
                 &.animated-image {
                     visibility: visible;
-                    animation: fadeIn 1s forwards;
+                    animation: fadeIn .5s forwards;
                 }
 
                 .svg {

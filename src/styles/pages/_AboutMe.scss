@@ -9,4 +9,48 @@
     background: $background-gradient;
     color: white;
 
+    .aboutme-text {
+        width: 50%;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.07);
+        margin: 5rem;
+    }
+
+    .skills {
+
+        width: 50%;
+        margin: 5rem;
+
+        .menu {
+            position: sticky;
+            top: 0;
+            z-index: 1; // Asegura que el menú esté por encima de las habilidades
+            background-color: rgba(0, 0, 0, 0.5); // Ajusta el color de fondo del menú
+            display: flex;
+            justify-content: space-around; // Alinea los botones del menú en el centro
+            margin-bottom: 3rem; // Espacio entre el menú y la sección de habilidades
+
+            button {
+                background: none;
+                border: none;
+                color: white;
+                cursor: pointer;
+                font-size: 1rem;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.1);
+                }
+            }
+        }
+
+        .section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); // Habilidades en filas con un máximo de tres habilidades por línea
+            gap: 2rem; // Espacio entre las habilidades
+        }
+    }
 }

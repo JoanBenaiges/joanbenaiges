@@ -17,7 +17,7 @@
 
     &.animated {
         visibility: visible;
-        animation: fadeIn 1s forwards, gradient 5s ease infinite;
+        animation: fadeIn 0.5s forwards, gradient 5s ease infinite;
 
 
         button:active {
