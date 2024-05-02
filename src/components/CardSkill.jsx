@@ -9,7 +9,7 @@ function CardSkill({ skills }) {
             {skills.map(skill => (
 
 
-                <div className="image-and-name">
+                <div className="card-skill">
 
                     <img src={`https://svgur.com/i/${skill.logoImage}`} alt={skill.name} />
                     <p>{skill.name}</p>

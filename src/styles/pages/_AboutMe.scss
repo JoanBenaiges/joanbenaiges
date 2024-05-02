@@ -1,13 +1,5 @@
 .aboutme-page {
-    height: 100%;
-    margin: 0;
-    font-family: $font-family;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: $background-gradient;
-    color: white;
+    @include bg-pages;
 
     .aboutme-text {
         width: 50%;
@@ -15,42 +7,63 @@
         border-radius: 8px;
         background-color: rgba(255, 255, 255, 0.07);
         margin: 5rem;
+        animation: fadeIn 0.5s forwards;
     }
 
     .skills {
-
-        width: 50%;
+        width: 30%;
         margin: 5rem;
+        height: 50%;
+        animation: fadeIn 0.5s forwards;
+
+
+        .all-skills {
+
+            border-left: 1px solid $green-light;
+            border-right: 1px solid $green-light;
+            width: 100%;
+            height: 80%;
+            background: linear-gradient(to bottom, $green-dark 0%, transparent 100%);
+        }
+
+        hr {
+            margin: 0;
+            border-color: $green-light;
+        }
 
         .menu {
-            position: sticky;
-            top: 0;
-            z-index: 1; // Asegura que el menú esté por encima de las habilidades
-            background-color: rgba(0, 0, 0, 0.5); // Ajusta el color de fondo del menú
             display: flex;
-            justify-content: space-around; // Alinea los botones del menú en el centro
-            margin-bottom: 3rem; // Espacio entre el menú y la sección de habilidades
+            justify-content: space-around;
+            transform: translateY(2px);
 
             button {
-                background: none;
+                margin-bottom: 0;
+                background-color: transparent;
+                padding: 16px 40px;
+                color: #fff;
+                font-size: 16px;
+                font-weight: 600;
+                text-decoration: none;
                 border: none;
-                color: white;
-                cursor: pointer;
-                font-size: 1rem;
-                padding: 0.5rem 1rem;
-                border-radius: 5px;
-                transition: background-color 0.3s;
 
                 &:hover {
-                    background-color: rgba(255, 255, 255, 0.1);
+                    color: $green-light;
+                    transition: color 0.3s ease;
+                }
+
+                &.selected {
+                    color: $green-light;
+                    background-color: $green-dark;
+                    border: 1px solid $green-light;
+                    border-top-left-radius: 6px;
+                    border-top-right-radius: 6px;
+                    border-bottom: none;
+                    cursor: pointer;
+                    transition: border 0.5s ease, color 0.3s ease;
                 }
             }
         }
 
-        .section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); // Habilidades en filas con un máximo de tres habilidades por línea
-            gap: 2rem; // Espacio entre las habilidades
-        }
+
     }
 }

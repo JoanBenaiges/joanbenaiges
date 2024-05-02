@@ -1,10 +1,17 @@
 .skills-list {
 
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
-    .image-and-name {
+    .card-skill {
         text-align: center;
         transition: transform 0.3s ease;
+        margin: 0.7rem;
+        padding: 1rem;
+        position: relative;
+        width: 75px;
+        height: 100px;
 
         img {
             width: 3.125rem;
@@ -12,11 +19,11 @@
         }
 
         p {
-            margin-top: 5px;
+            margin-top: 0.625rem;
         }
     }
 
-    .image-and-name:hover {
+    .card-skill:hover {
         color: $green-light;
         transform: scale(1.1);
     }

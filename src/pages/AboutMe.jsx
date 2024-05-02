@@ -5,12 +5,12 @@ import backendSkills from '../json/BackendSkills.json';
 import tools from '../json/Tools.json';
 
 function About({ language, toggleLanguage }) {
-    const [selectedOption, setSelectedOption] = useState('Frontend'); // Estado para almacenar la opción seleccionada, por defecto Frontend
+    const [selectedOption, setSelectedOption] = useState('Frontend');
 
     return (
         <div className="aboutme-page">
 
-            <div className="aboutme-text">
+            <section className="aboutme-text">
                 <h2>About me</h2>
                 <p>
                     After a significant career change in my life, I decided to dive into the exciting
@@ -26,20 +26,22 @@ function About({ language, toggleLanguage }) {
                     <br />
                     Thank you for visiting my portfolio and happy code!
                 </p>
-            </div>
+            </section>
 
-            <div className="skills">
+            <section className="skills">
                 <div className="menu">
-                    <button onClick={() => setSelectedOption('Frontend')}>Frontend</button>
-                    <button onClick={() => setSelectedOption('Backend')}>Backend</button>
-                    <button onClick={() => setSelectedOption('Tools')}>{language === 'en' ? 'Tools' : 'Herramientas'}</button>
+                    <button className={selectedOption === 'Frontend' ? 'selected' : ''} onClick={() => setSelectedOption('Frontend')}>Frontend</button>
+                    <button className={selectedOption === 'Backend' ? 'selected' : ''} onClick={() => setSelectedOption('Backend')}>Backend</button>
+                    <button className={selectedOption === 'Tools' ? 'selected' : ''} onClick={() => setSelectedOption('Tools')}>{language === 'en' ? 'Tools' : 'Herramientas'}</button>
                 </div>
-                <div className="section">
+
+                <hr />
+                <div className="all-skills">
                     {selectedOption === 'Frontend' && <CardSkill skills={frontendSkills} />}
                     {selectedOption === 'Backend' && <CardSkill skills={backendSkills} />}
                     {selectedOption === 'Tools' && <CardSkill skills={tools} />}
                 </div>
-            </div>
+            </section>
         </div >
     );
 }

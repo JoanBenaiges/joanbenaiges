@@ -3,6 +3,18 @@ $green-light: #53cd98;
 $green-dark: #173b30;
 $font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
+@mixin bg-pages {
+    height: 100%;
+    margin: 0;
+    font-family: $font-family;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: $background-gradient;
+    color: white;
+}
+
 @mixin button-style {
     background-color: #42a66c;
     display: inline-block;

@@ -1,12 +1,32 @@
 [
     {
-        "id": "12",
+        "id": "1",
         "name": "GitHub",
         "logoImage": "14L9.svg"
     },
     {
-        "id": "13",
+        "id": "2",
         "name": "Postman",
         "logoImage": "14M1.svg"
+    },
+    {
+        "id": "3",
+        "name": "Git",
+        "logoImage": "15dp.svg"
+    },
+    {
+        "id": "4",
+        "name": "VSCode",
+        "logoImage": "15cQ.svg"
+    },
+    {
+        "id": "5",
+        "name": "Linux",
+        "logoImage": "15dq.svg"
+    },
+    {
+        "id": "6",
+        "name": "Npm",
+        "logoImage": "15dU.svg"
     }
 ]
