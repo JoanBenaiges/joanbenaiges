@@ -23,11 +23,11 @@ function Home({ language }) {
                 <h1 className={showTitle ? "show-title" : ""}>
                     {language === 'en' ? (
                         <>
-                            ¡Hi! <span className="break-line">Joan here.</span>
+                            ¡Hi there! <span className="break-line">I'm <span className="highlighted-word">Joan.</span></span>
                         </>
                     ) : (
                         <>
-                            ¡Hola! <span className="break-line">aquí Joan.</span>
+                            ¡Hola! <span className="break-line">Soy <span className="highlighted-word">Joan.</span></span>
                         </>
                     )}
                 </h1>
@@ -64,7 +64,7 @@ function Home({ language }) {
 
             <div className={`image ${showImage ? 'animated-image' : ''}`}></div>
 
-        </div>
+        </div >
     );
 
 }

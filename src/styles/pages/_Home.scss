@@ -8,7 +8,7 @@ body {
         .image {
             margin: 5% 0;
             background-image: url("https://i.imgur.com/NWoE8wK.png");
-            filter: grayscale(1);
+            filter: grayscale(100%);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -16,7 +16,7 @@ body {
             width: 30vw;
             height: 30vw;
             position: relative;
-            translate: 20%;
+            translate: 30%;
             visibility: hidden;
 
             &.animated-image {
@@ -29,10 +29,10 @@ body {
 
             position: absolute;
             z-index: 1;
-            translate: -60%;
+            translate: -50%;
 
             h1 {
-                font-size: 6rem;
+                font-size: 5.8rem;
                 line-height: 1;
                 margin: 0%;
                 visibility: hidden;
@@ -49,6 +49,13 @@ body {
                 overflow: hidden;
                 white-space: nowrap;
                 animation: typing 0.5s steps(100, end);
+
+                .highlighted-word {
+                    color: $green-light;
+                    /* Cambia este color al que desees */
+                    font-weight: bold;
+                    /* O cualquier otro estilo que desees aplicar */
+                }
             }
 
             @keyframes typing {

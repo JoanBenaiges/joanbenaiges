@@ -26,6 +26,7 @@ function About({ language, toggleLanguage }) {
                     <br />
                     Thank you for visiting my portfolio and happy code!
                 </p>
+
             </section>
 
             <section className="skills">
