@@ -26,22 +26,23 @@ body {
         }
 
         .contentText {
-
+            width: 27rem;
             position: absolute;
             z-index: 1;
             translate: -50%;
 
             h1 {
                 font-size: 5.8rem;
+                height: 11.9rem;
                 line-height: 1;
                 margin: 0%;
                 visibility: hidden;
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 
-
                 .break-line {
                     display: block;
                 }
+
             }
 
             .show-title {
@@ -73,6 +74,14 @@ body {
                 font-size: 2rem;
                 visibility: hidden;
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+
+                .break-line {
+                    display: block;
+                }
+
+                i {
+                    font-size: 1.4rem;
+                }
             }
 
             .social-link {

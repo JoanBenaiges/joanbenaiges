@@ -27,7 +27,7 @@ function Home({ language }) {
                         </>
                     ) : (
                         <>
-                            ¡Hola! <span className="break-line">Soy <span className="highlighted-word">Joan.</span></span>
+                            ¡Saludos! <span className="break-line">Soy <span className="highlighted-word">Joan.</span></span>
                         </>
                     )}
                 </h1>
@@ -35,11 +35,21 @@ function Home({ language }) {
                 <p className={showTitle ? "show-title" : ""}>
                     {language === 'en' ? (
                         <>
-                            Full-Stack web developer
+                            <span className="highlighted-word">
+                                Full-Stack web developer
+                            </span>
+
+                            <span className="break-line"></span>
+                            <i>Coding beautifully simple things.</i>
                         </>
                     ) : (
                         <>
-                            Desarrollador web full-stack
+                            <span className="highlighted-word">
+                                Desarrollador web full-stack
+                            </span>
+
+                            <span className="break-line"></span>
+                            <i>Coding beautifully simple things.</i>
                         </>
                     )}
                 </p>
