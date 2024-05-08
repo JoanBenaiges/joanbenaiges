@@ -102,3 +102,21 @@
         transform: rotateY(180deg);
     }
 }
+
+
+@media only screen and (max-width: 963px) {
+    .list-projects {
+        margin-top: 45rem;
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 490px) {
+    .list-projects {
+
+        .card-project {
+            width: 350px;
+        }
+    }
+}

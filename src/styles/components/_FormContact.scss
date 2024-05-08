@@ -14,6 +14,7 @@
     background-size: 200% 100%;
     backdrop-filter: blur(5px);
     visibility: hidden;
+    margin: 0rem 1rem;
 
     &.animated {
         visibility: visible;
@@ -104,15 +105,6 @@
     }
 }
 
-@media only screen and (max-width: 847px) {
-
-    .form-container {
-        margin: 0rem 1rem;
-    }
-
-
-}
-
 
 @keyframes fadeIn {
     from {
@@ -136,5 +128,12 @@
 
     100% {
         background-position: 0% 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .form-container {
+        width: 80vw;
+
     }
 }

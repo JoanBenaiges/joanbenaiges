@@ -1,158 +1,154 @@
-body {
-    height: 100%;
-    margin: 0;
+.home-page {
+    @include bg-pages;
 
-    .home-page {
-        @include bg-pages;
 
-        .image {
-            margin: 5% 0;
-            background-image: url("https://i.imgur.com/NWoE8wK.png");
-            filter: grayscale(100%);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            border-radius: 50%;
-            width: 30vw;
-            height: 30vw;
-            position: relative;
-            translate: 30%;
+    .image {
+        margin: 5% auto;
+        background-image: url("https://i.imgur.com/NWoE8wK.png");
+        filter: grayscale(100%);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        width: 30vw;
+        height: 30vw;
+        position: relative;
+        translate: 30%;
+        visibility: hidden;
+        transform: translateX(-60%);
+
+        &.animated-image {
+            visibility: visible;
+            animation: fadeIn 0.5s forwards;
+        }
+    }
+
+    .contentText {
+        width: 70%;
+        max-width: 600px;
+        position: relative;
+        z-index: 1;
+        transform: translateX(+75%);
+
+
+        h1 {
+            font-size: 5vw;
+            height: 11.9rem;
+            line-height: 1;
+            margin: 0%;
+            visibility: hidden;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+
+            .break-line {
+                display: block;
+            }
+        }
+
+        .show-title {
+            visibility: visible;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 0.5s steps(100, end);
+
+            .highlighted-word {
+                color: $green-light;
+                font-weight: bold;
+            }
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        p {
+            font-size: 1.7vw;
+            visibility: hidden;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+
+            .break-line {
+                display: block;
+            }
+
+            i {
+                font-size: 1.2vw;
+            }
+        }
+
+        .social-link {
+            display: flex;
+            height: 70px;
+            width: 270px;
+            padding-left: 3.5rem;
             visibility: hidden;
 
             &.animated-image {
                 visibility: visible;
-                animation: fadeIn 0.5s forwards;
-            }
-        }
-
-        .contentText {
-            width: 27rem;
-            position: absolute;
-            z-index: 1;
-            translate: -50%;
-
-            h1 {
-                font-size: 5.8rem;
-                height: 11.9rem;
-                line-height: 1;
-                margin: 0%;
-                visibility: hidden;
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-
-                .break-line {
-                    display: block;
-                }
-
+                animation: fadeIn .5s forwards;
             }
 
-            .show-title {
-                visibility: visible;
-                overflow: hidden;
-                white-space: nowrap;
-                animation: typing 0.5s steps(100, end);
-
-                .highlighted-word {
-                    color: $green-light;
-                    /* Cambia este color al que desees */
-                    font-weight: bold;
-                    /* O cualquier otro estilo que desees aplicar */
-                }
+            .svg {
+                transition: opacity 0.25s;
+                z-index: 2;
+                cursor: pointer;
+                transform: scale(1);
+                width: 60%;
+                height: 100%;
             }
 
-            @keyframes typing {
-                from {
-                    width: 0;
-                }
-
-                to {
-                    width: 100%;
-                }
-            }
-
-
-            p {
-                font-size: 2rem;
-                visibility: hidden;
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-
-                .break-line {
-                    display: block;
-                }
-
-                i {
-                    font-size: 1.4rem;
-                }
-            }
-
-            .social-link {
+            .social-github,
+            .social-linkedin,
+            .social-cv {
+                position: relative;
                 display: flex;
-                height: 70px;
-                width: 270px;
-                padding-left: 3.5rem;
-                visibility: hidden;
-
-                &.animated-image {
-                    visibility: visible;
-                    animation: fadeIn .5s forwards;
-                }
-
-                .svg {
-                    transition: opacity 0.25s;
-                    z-index: 2;
-                    cursor: pointer;
-                    transform: scale(1);
-                    width: 60%;
-                    height: 100%;
-                }
-
-                .social-github,
-                .social-linkedin,
-                .social-cv {
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 25%;
-                    color: whitesmoke;
-                    font-size: 32px;
-                    transition: 0.25s;
-                    border-radius: 50px;
-                }
-
-                .social-github:hover {
-                    background-color: black;
-                    animation: bounce 0.4s linear;
-                }
-
-                .social-linkedin:hover {
-                    background-color: #0a66c2;
-                    animation: bounce 0.4s linear;
-                }
-
-                .social-cv:hover {
-                    background-color: #06900d;
-                    animation: bounce 0.4s linear;
-                }
-
-                @keyframes bounce {
-                    40% {
-                        transform: scale(1.3);
-                    }
-
-                    60% {
-                        transform: scale(0.7);
-                    }
-
-                    80% {
-                        transform: scale(1.1);
-                    }
-
-                    100% {
-                        transform: scale(0.9);
-                    }
-                }
+                align-items: center;
+                justify-content: center;
+                width: 25%;
+                color: whitesmoke;
+                font-size: 32px;
+                transition: 0.25s;
+                border-radius: 50px;
             }
 
+            .social-github:hover {
+                background-color: black;
+                animation: bounce 0.4s linear;
+            }
+
+            .social-linkedin:hover {
+                background-color: #0a66c2;
+                animation: bounce 0.4s linear;
+            }
+
+            .social-cv:hover {
+                background-color: #06900d;
+                animation: bounce 0.4s linear;
+            }
+
+            @keyframes bounce {
+                40% {
+                    transform: scale(1.3);
+                }
+
+                60% {
+                    transform: scale(0.7);
+                }
+
+                80% {
+                    transform: scale(1.1);
+                }
+
+                100% {
+                    transform: scale(0.9);
+                }
+            }
         }
     }
 }
+
+@media only screen and (max-width: 768px) {}
