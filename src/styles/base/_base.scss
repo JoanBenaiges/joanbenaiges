@@ -4,6 +4,7 @@ $green-dark: #173b30;
 $font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 @mixin bg-pages {
+    height: 100%;
     margin: 0;
     font-family: $font-family;
     display: flex;

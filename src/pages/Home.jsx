@@ -21,15 +21,9 @@ function Home({ language }) {
             <div className="contentText">
 
                 <h1 className={showTitle ? "show-title" : ""}>
-                    {language === 'en' ? (
-                        <>
-                            ¡Hi there! <span className="break-line">I'm <span className="highlighted-word">Joan.</span></span>
-                        </>
-                    ) : (
-                        <>
-                            ¡Saludos! <span className="break-line">Soy <span className="highlighted-word">Joan.</span></span>
-                        </>
-                    )}
+                    Joan
+                    <br />
+                    Benaiges
                 </h1>
 
                 <p className={showTitle ? "show-title" : ""}>
