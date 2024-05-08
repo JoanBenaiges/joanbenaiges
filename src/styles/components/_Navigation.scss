@@ -6,13 +6,12 @@
     width: 100%;
     z-index: 99;
     color: white;
+    align-items: center;
 
     button {
         width: 50px;
         height: 50px;
         border-radius: 50%;
-
-
 
         &.english {
             background-image: url('https://i.imgur.com/wAv6qId.png');
@@ -30,8 +29,6 @@
         transition: .5s;
         cursor: pointer;
     }
-
-
 
     button:active {
         scale: 0.9;
@@ -110,29 +107,36 @@
     }
 
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 847px) {
 
-        nav {
-            margin-top: 0.7rem;
-            margin-bottom: 1rem;
-
-            .nav-container .menu-icon {
-                display: flex;
-                margin-right: 0%;
-                justify-content: end;
-                flex-grow: inherit;
-            }
-
-            .nav-container .nav-links {
-                display: none;
-                position: absolute;
-                top: 2rem;
-                padding: 2.5rem 0rem 0rem 4rem;
-                text-align: right;
-                transition: display 0.3s ease;
-            }
-
+        button {
+            width: 40px;
+            height: 40px;
         }
 
+        nav {
+
+            padding-top: 1rem;
+
+            .nav-container {
+
+                margin: 0px;
+                justify-content: end;
+
+                .menu-icon {
+                    display: flex;
+                }
+
+                .nav-links {
+                    display: none;
+                    position: absolute;
+                    top: 2rem;
+                    padding: 2.5rem 0rem 0rem 4rem;
+                    text-align: right;
+                    transition: display 0.3s ease;
+                }
+
+            }
+        }
     }
 }
