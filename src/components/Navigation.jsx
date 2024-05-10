@@ -11,7 +11,7 @@ function Navigation({ language, toggleLanguage }) {
     return (
         <div className='navigation'>
             <nav>
-                <img src="./public/logo1.png" className="logo" alt="Logo"></img>
+                <div className='logo'>J.Benaiges</div>
                 <div className="nav-container">
                     <div className="menu-icon" onClick={toggleMenu}>☰</div>
                     <ul className={`nav-links ${showMenu ? 'show' : ''}`}>
