@@ -149,6 +149,62 @@
             }
         }
     }
+
 }
 
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 517px) {
+
+    .home-page {
+
+        align-items: normal;
+
+        .image {
+            margin-top: 10rem;
+            transform: translateX(-95%);
+            width: 35vw;
+            height: 35vw;
+        }
+
+        .contentText {
+            margin-top: 10rem;
+            transform: translateX(+35%);
+            width: auto;
+
+
+            h1 {
+                font-size: 7vw;
+                height: 5rem;
+            }
+
+            p {
+                font-size: 3vw;
+
+                i {
+                    font-size: 2vw;
+                }
+            }
+
+            .social-link {
+                height: 100px;
+                padding-left: 0rem;
+
+                .social-github,
+                .social-linkedin,
+                .social-cv {
+                    width: 25%;
+                    font-size: 32px;
+                    transition: 0.25s;
+                    border-radius: 50px;
+                }
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1310px) {
+    .contentText {
+        width: 50%;
+        transform: translateX(+60%);
+    }
+}
