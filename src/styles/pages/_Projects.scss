@@ -2,3 +2,12 @@
     @include bg-pages;
 
 }
+
+
+@media only screen and (max-width: 963px) {
+    .projects-page {
+        height: 100%;
+
+    }
+
+}

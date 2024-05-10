@@ -189,7 +189,7 @@ function About({ language }) {
                     {selectedOption === 'Tools' && <CardSkill skills={tools} />}
                 </div>
             </section>
-        </div >
+        </div>
     );
 }
 
