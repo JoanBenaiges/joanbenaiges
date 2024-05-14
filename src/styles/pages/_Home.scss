@@ -160,33 +160,33 @@
 
         .image {
             margin-top: 10rem;
-            transform: translateX(-95%);
-            width: 35vw;
-            height: 35vw;
+            transform: translateX(-90%);
+            width: 40vw;
+            height: 34vw;
         }
 
         .contentText {
+            width: 90%;
             margin-top: 10rem;
-            transform: translateX(+35%);
-            width: auto;
-
+            transform: translateX(+25%);
 
             h1 {
-                font-size: 7vw;
-                height: 5rem;
+                font-size: 9vw;
+                height: 5.5rem;
             }
 
             p {
-                font-size: 3vw;
+                font-size: 4.5vw;
 
                 i {
-                    font-size: 2vw;
+                    font-size: 3.7vw;
                 }
             }
 
             .social-link {
                 height: 100px;
                 padding-left: 0rem;
+                justify-content: center;
 
                 .social-github,
                 .social-linkedin,
