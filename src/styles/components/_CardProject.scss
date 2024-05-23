@@ -13,8 +13,8 @@
         margin-bottom: 0.7rem;
         margin: 1rem;
         position: relative;
-        width: 450px;
-        height: 300px;
+        width: 25vw;
+        height: 16vw;
         perspective: 1000px;
 
         .card-wrapper {
@@ -42,35 +42,35 @@
                     width: 100%;
 
                     .card-title {
-                        margin-top: 10rem;
-                        font-size: 24px;
+                        margin-top: 9vw;
+                        font-size: 1.5vw;
                         font-weight: bold;
-                        margin-bottom: 10px;
+                        margin-bottom: 1vw;
                         background-color: rgba(0, 0, 0, 0.8);
-                        padding: 0.8rem;
+                        padding: 1vw;
                     }
 
                     .card-tech {
                         color: $green-light;
-                        font-size: 24px;
+                        font-size: 1.45vw;
                         padding: 1rem;
                         font-weight: bold;
-                        margin-bottom: 10px;
+                        margin-bottom: 0.2vw;
 
                     }
 
                     .card-description {
-                        font-size: 16px;
-                        padding: 0rem 1rem 1rem 1rem;
+                        font-size: 1vw;
+                        padding: 0rem 1vw 1vw 1vw;
                     }
 
 
                     .links {
 
                         .icon {
-                            margin: 0.5rem;
-                            width: 2rem;
-                            height: 2rem;
+                            margin: 0.5vw;
+                            width: 2.3vw;
+                            height: 2.3vw;
                             transition: transform 0.3s ease;
 
                             &:hover {
@@ -104,19 +104,60 @@
 }
 
 
-@media only screen and (max-width: 963px) {
+
+@media only screen and (max-width: 1200px) {
     .list-projects {
+
         margin-top: 8rem;
-        margin-bottom: 1rem;
-    }
-
-}
-
-@media only screen and (max-width: 490px) {
-    .list-projects {
+        margin-bottom: 3rem;
 
         .card-project {
             width: 350px;
+            height: 250px;
+
+            .card-wrapper {
+
+
+                .card-face {
+
+
+                    .card-content {
+
+                        .card-title {
+                            margin-top: 10rem;
+                            font-size: 22px;
+                            padding: 0.8rem;
+                        }
+
+                        .card-tech {
+                            font-size: 18px;
+
+                        }
+
+                        .card-description {
+                            font-size: 14px;
+                        }
+
+
+                        .links {
+
+                            .icon {
+                                margin: 0.3rem;
+                                width: 1.8rem;
+                                height: 1.8rem;
+                            }
+                        }
+                    }
+
+                }
+
+
+            }
+
+
         }
+
     }
+
+
 }
