@@ -33,5 +33,10 @@
         "id": "9",
         "name": "Bootstrap",
         "logoImage": "14Ja.svg"
+    },
+    {
+        "id": "9",
+        "name": "jQuery",
+        "logoImage": "16ot.svg"
     }
 ]
